@@ -19,7 +19,9 @@ from rest_framework import routers
 from restcrud import views
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
+router.register(r'movies', views.MoviesViewSet)
+router.register(r'users', views.UsersViewSet)
+router.register(r'rentals', views.RentalsViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

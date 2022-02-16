@@ -74,11 +74,14 @@ WSGI_APPLICATION = 'djangomysqlrestcrud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'testDB',
+        'NAME': 'movieRentalDB',
         'USER': 'admin',
         'PASSWORD': 'root1234',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'HOST': 'duplidb.cqxzpcrm4rdd.eu-west-1.rds.amazonaws.com',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
 
